@@ -1,8 +1,46 @@
+"use client"
+
 import { HeroData } from '@/src/utils/data'
 import EmailBox from '../Emailbox/EmailBox'
 import './Hero.css'
+import {animate, motion} from 'framer-motion'
 
 const Hero = () => {
+
+    const variants = (delay) => {
+        return {
+            initial: {
+                y: "18rem"
+            },
+            animate: {
+                y: "0rem",
+                transition: {
+                    type: "spring",
+                    damping: 25,
+                    duration: 2.5,
+                    delay
+                }
+            }
+        }
+    };
+
+    const imgVariants=()=>(
+        {
+            initial:{
+                y:"18rem"
+            },
+            animate:{
+                y:"0rem",
+                transition:{
+                    type:"spring",
+                    duration:2,
+                    stiffness:30
+                }
+            }
+        }
+    )
+    
+
   return (
     <div className="h-wrapper">
         <div className="container">
@@ -13,20 +51,41 @@ const Hero = () => {
                     <div className="image-row">
                         {HeroData?.slice(0,3).map((person,index)=>(
                             <div key={index} className='person-pill'>
-                                <div className="person-pill-bg">
-                                    <img src={person.src} alt=" person" />
-                                </div>
+                                <motion.div 
+                                    initial={"initial"}
+                                    animate={"animate"}
+                                    variants={variants(person.delay)}
+                                    className="person-pill-bg"
+                                    style={{backgroundColor: person.bg}}
+                                    >
+                                
+                                    <motion.img 
+                                        initial={"initial"}
+                                        animate={"animate"}
+                                        variants={imgVariants()}
+                                        src={person.src} alt=" person" />
+                                </motion.div>
                             </div>
                         ))}
-            
                     </div>
 
                     <div className="image-row">
                         {HeroData?.slice(3,6).map((person,index)=>(
                             <div key={index} className='person-pill'>
-                                <div className="person-pill-bg">
-                                    <img src={person.src} alt=" person" />
-                                </div>
+                                <motion.div 
+                                    initial={"initial"}
+                                    animate={"animate"}
+                                    variants={variants(person.delay)}
+                                    className="person-pill-bg"
+                                    style={{backgroundColor: person.bg}}
+                                    >
+                                
+                                    <motion.img 
+                                        initial={"initial"}
+                                        animate={"animate"}
+                                        variants={imgVariants()}
+                                        src={person.src} alt=" person" />
+                                </motion.div>
                             </div>
                         ))}
                     </div>
