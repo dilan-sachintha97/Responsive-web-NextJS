@@ -1,0 +1,92 @@
+.h-wrapper{
+    background-color: var(--primary-color);
+    height: 120vh;
+    overflow: hidden;
+}
+
+.h-wrapper .container{
+    padding-top: 8rem;
+}
+
+.h-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    position: relative;
+    /* border: 1px solid red;  */
+
+}
+/* left side style */
+.h-left{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 5rem;
+    position: relative;
+}
+
+.image-row{
+    display: flex;
+    gap: 2rem;
+   
+}
+
+.person-pill{
+    height: 15rem;
+    width: 6rem;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.person-pill-bg{
+    height: 100%;
+    width: 100%;
+    border-radius: 999px;
+    overflow: hidden;
+
+    /* border: 1px solid red; */
+}
+
+.person-pill-bg > img{
+    width: 100%;
+    object-fit: cover;
+    scale: 2;
+    margin-top: 4rem;
+}
+
+.image-row >:nth-child(2){
+    transform: translateY(-4rem);
+}
+
+
+/* right side style */
+.h-right{
+    flex: 1.25;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.h-title{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--third-color);
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.h-title >:nth-child(3){
+    color: white;
+}
+
+.h-des{
+    color: white;
+    font-size: 1rem;
+}
