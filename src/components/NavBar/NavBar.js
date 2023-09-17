@@ -1,8 +1,10 @@
 import './NavBar.css'
+import{AiOutlineMenu} from 'react-icons/ai'
 
 const NavBar = () => {
   return (
     <div className="n-wrapper">
+      {/* desktop version */}
         <div className="container">
             <div className="n-container">
                {/* left side */}
@@ -19,10 +21,25 @@ const NavBar = () => {
                         <span>Testimonials</span>
                     </div>
                     <div className="found-button">
-                       <button>find</button>
+                      Get funded
                     </div>
                </div>
             </div>
+        </div>
+
+        {/* mobile/ tab version */}
+        <div className="nm-container">
+          <span>TEST APP</span>
+          <AiOutlineMenu  size={30}/>
+
+          {/* mobile menu */}
+          <div className="nm-menu">
+            <span>What we do</span>
+            <span>How it works</span>
+            <span>who we invest</span>
+            <span>Testimonials</span>
+            <div className="m-funded-button">Get funded</div>
+          </div>
         </div>
     </div>
   )
