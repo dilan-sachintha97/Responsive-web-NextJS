@@ -19,7 +19,7 @@ const NavBar = () => {
                         <span>Testimonials</span>
                     </div>
                     <div className="found-button">
-                       <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolores vero facere aliquam, laboriosam modi maiores, id ex beatae praesentium alias similique nemo doloribus fuga placeat unde. Autem, maxime adipisci!</h1>
+                       <button>find</button>
                     </div>
                </div>
             </div>
