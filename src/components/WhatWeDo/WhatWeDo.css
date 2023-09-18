@@ -1,0 +1,29 @@
+.wwd-wrapper{
+    position: relative;
+}
+
+.container{
+    /* border: 1px solid blue; */
+}
+
+.wwd-container{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    /* border: 1px solid red; */
+}
+
+.wwd-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 75%;
+}
+
+/* tag, title, des -> Page.css */
