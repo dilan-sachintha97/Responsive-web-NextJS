@@ -31,8 +31,9 @@ const HowItWork = () => {
                                 src={data.icon} 
                                 width={128} 
                                 height={128} 
-                                style={{translate:"50% 0rem"}}
+                                className='img-icon'
                                 alt='icon'/>
+                
                         </div>
                     </div>
                ))}
