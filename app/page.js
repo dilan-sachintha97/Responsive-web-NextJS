@@ -7,6 +7,7 @@ import WhatWeDo from '@/src/components/WhatWeDo/WhatWeDo';
 import OurDiff from '@/src/components/OurDiff/OurDiff';
 import { motion, useAnimation } from 'framer-motion';
 import HowItWork from '@/src/components/HowItwork/HowItWork';
+import WhoWeInvest from '@/src/components/WhoWeInvest/WhoWeInvest';
 
 export default function Home() {
 
@@ -18,25 +19,41 @@ export default function Home() {
         <Hero/>
         <BrandingVideo/>
         <WhatWeDo/>
-        
-        <motion.div
-          onViewportEnter={()=>{
-            controls.start({
-              backgroundColor: "var(--secondary-color)",
-            })
-          }}
+          <motion.div
+            onViewportEnter={()=>{
+              controls.start({
+                backgroundColor: "var(--secondary-color)",
+              })
+            }}
 
-          onViewportLeave={()=>{
-            controls.start({
-              backgroundColor:"white"
-            })
-          }}
-          
-          viewport={{amount:0.4}}
-        >
-         <OurDiff/>
-        </motion.div>
+            onViewportLeave={()=>{
+              controls.start({
+                backgroundColor:"white"
+              })
+            }}
+            
+            viewport={{amount:0.4}}
+          >
+          <OurDiff/>
+          </motion.div>
         <HowItWork/>
+          <motion.div
+            onViewportEnter={()=>{
+              controls.start({
+                backgroundColor: "var(--primary-color)",
+              })
+            }}
+
+            onViewportLeave={()=>{
+              controls.start({
+                backgroundColor:"white"
+              })
+            }}
+            
+            viewport={{amount:0.4}}
+          >
+          <WhoWeInvest/>
+          </motion.div>
       
     </motion.div>
   );
